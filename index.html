@@ -61,7 +61,9 @@
     </div>
 </section>
 <section class="bg-light" id="pricing" >
-    <div class="container-lg">
+
+<section class="bg-light" id="pricing" >
+    <div class="collapse.show container-lg" id="pricing-collapse">
     <div class="text-center mb-5">
         <h2>Top destinations!</h2>
     </div>
@@ -122,8 +124,9 @@
 </div>
 
 </section>
+
 <section id="welcome-summer" class="shadow-lg p-3 mb-5 bg-white rounded">
-    <div class="container-lg">
+    <div class="collapse.show container-lg" id="welcome-collapse">
     <div class="text-center mb-5">
         <h2>Welcome summer deals!</h2>
     </div>
@@ -205,7 +208,8 @@
 
 </section>
 
-<section id="best-deal">
+
+<section id="best-deal" >
     <div class="container-lg d-none d-md-block">
         <div class="row justify-content-center align-items-center">
             <div class="col-8 text-center text-md-start">
@@ -238,12 +242,13 @@
         </div>
     </div>
 </section>
-<section id="last-minute" class="bg-white rounded d-flex flex-wrap">
-    <div class="container-lg">
+
+<section id="last-minute" class="bg-white rounded d-flex flex-wrap mb-5">
+    <div class="container-lg mb-5" id="last-minute-collapse">
     <div class="text-center mb-5">
-        <h2>Last minute deals!</h2>
+        <h2>All the deals:</h2>
     </div>
-    <div class="row d-flex align-items-center justify-content-center">
+    <div class="row d-flex align-items-center justify-content-center  pt-5">
         <div class="col"> 
             <div class="card trip">
                 <div class="card-body">
@@ -291,12 +296,8 @@
 </section>
 
 
-
 <secion id="reviews" class="bg-light">
     <div class="container-lg collapse.show" id="reviews-collapse">
-        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#reviews-collapse" aria-expanded="false" aria-controls="reviews-collapse">
-            Hide section
-          </button>
         <div class="text-center">
             <h2><i class="bi bi-stars"></i>Testimonial</h2>
             <p class="lead">What people say about the our packages...</p>
@@ -472,10 +473,12 @@
     let allTrips = document.querySelectorAll(".trip")
     let allTripsNumber = parseInt(allTrips.length);
     console.log(allTripsNumber)
-    let footer = document.querySelector("footer");
+    let deals = document.querySelector("#last-minute");
     let numberTrips = document.createElement("p");
-    footer.append(numberTrips);
-    numberTrips.innerText = "Number of trips on offer is " + allTripsNumber;
+    deals.append(numberTrips);
+
+    numberTrips.innerText = "Number of trips on offer is: " + allTripsNumber;
+    numberTrips.className = "mx-auto"
     }
     window.onload = numberOfTrips();
     function addHotBadge() {
@@ -487,6 +490,15 @@
             iterator.append(addHotBadge);
             console.log(addHotBadge);
         }
+    }
+    function deleteCards() {
+        let cards = document.querySelectorAll(".card")
+        console.log(cards);
+        for (const iterator of cards) {
+            console.log(iterator);
+            iterator.remove();
+        }
+
     }
     
 </script>

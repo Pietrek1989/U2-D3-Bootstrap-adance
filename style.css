@@ -68,3 +68,7 @@ i {
     height: 100px;
     
 }
+.btn-collapse {
+    width: 50px;
+    font-size: 0.9rem;
+}
