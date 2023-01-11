@@ -11,6 +11,15 @@ i {
  border-radius: 50%;
  opacity: 90%;
 }
+@media only screen and (max-width: 800px) {
+    .hero-image {
+        width: 50%;
+        margin-inline: auto;
+        margin-top: 10px;
+        
+
+       }
+  }
 
 #intro {
     background-image: url(assets/yu-kato-AqCBCOcqSZQ-unsplash.jpg);
@@ -30,6 +39,9 @@ i {
 #last-minute .card {
     height: 35vh;
     overflow: hidden;
+}
+#last-minute .col {
+    min-width: 200px;
 }
 
 #last-minute img {
