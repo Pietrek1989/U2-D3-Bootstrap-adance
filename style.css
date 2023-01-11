@@ -1,0 +1,42 @@
+section{
+    padding: 60px 0;
+}
+i {
+    color: green;
+}
+.image-cover img {
+ width: 100%;
+ object-fit: cover;
+ border: solid white 2px;
+ border-radius: 50%;
+ opacity: 90%;
+}
+
+#intro {
+    background-image: url(assets/yu-kato-AqCBCOcqSZQ-unsplash.jpg);
+    object-fit: cover;
+    background-repeat: no-repeat, repeat;
+    background-blend-mode: thicker;
+}
+.card-img-top {
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+}
+#best-deal img {
+    border-radius: 1% 50% 1% 50% / 60% 60% 40% 40%;
+
+  }
+#last-minute .card {
+    height: 35vh;
+    overflow: hidden;
+}
+
+#last-minute img {
+    width: 100%;
+    object-fit: cover;
+}
+
+#last-minute .col {
+    overflow: hidden;
+}
