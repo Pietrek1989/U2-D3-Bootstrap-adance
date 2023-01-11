@@ -30,10 +30,7 @@
             <li class="nav-item">
                 <a href="#best-deal" class="nav-link">Best deal</a>
             </li>
-            <li class="nav-item d-md-none">
-                <a href="#pricing" class="nav-link">Summer deals</a>
-            </li>
-            <li class="nav-item ms-2 d-none d-md-inline">
+            <li class="nav-item d-md-inline">
                 <a href="#pricing" class="btn btn-success">Book now!</a>
             </li>
             </ul>
@@ -294,8 +291,12 @@
 </section>
 
 
+
 <secion id="reviews" class="bg-light">
-    <div class="container-lg">
+    <div class="container-lg collapse.show" id="reviews-collapse">
+        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#reviews-collapse" aria-expanded="false" aria-controls="reviews-collapse">
+            Hide section
+          </button>
         <div class="text-center">
             <h2><i class="bi bi-stars"></i>Testimonial</h2>
             <p class="lead">What people say about the our packages...</p>
@@ -463,17 +464,30 @@
         </div>
     </div>
 </div>
+<img src="" alt="">
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 <script>
     function numberOfTrips() {
     let allTrips = document.querySelectorAll(".trip")
-    let footer = document.getElementsByTagName("footer");
+    let allTripsNumber = parseInt(allTrips.length);
+    console.log(allTripsNumber)
+    let footer = document.querySelector("footer");
     let numberTrips = document.createElement("p");
     footer.append(numberTrips);
-    numberTrips.innerText = "Number of trips available is" + allTrips;
+    numberTrips.innerText = "Number of trips on offer is " + allTripsNumber;
     }
     window.onload = numberOfTrips();
+    function addHotBadge() {
+        let summerCards = document.querySelectorAll("#welcome-summer .card")
+        for (const iterator of summerCards) {
+            let addHotBadge = document.createElement("div");
+            addHotBadge.innerHTML = "<i class='bi bi-fire'></i>"
+            addHotBadge.classList.add("hot-badge");
+            iterator.append(addHotBadge);
+            console.log(addHotBadge);
+        }
+    }
     
 </script>
 </body>

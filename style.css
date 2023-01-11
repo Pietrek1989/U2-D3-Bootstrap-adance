@@ -52,3 +52,19 @@ i {
 #last-minute .col {
     overflow: hidden;
 }
+
+#welcome-summer .card {
+    position: relative;
+}
+.hot-badge {
+    position: absolute;
+    width: 20%;
+    height: 20%;
+    top: 10px;
+    left: 10px;
+}
+.bi-fire {
+    color: red;
+    height: 100px;
+    
+}
